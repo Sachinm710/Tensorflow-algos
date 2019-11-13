@@ -11,5 +11,9 @@ result = tf.multiply(x1,x2)
 
 print (result)
 
-sess = tf.compat.v1.Session()
-print(sess.run(result))
+
+with tf.compat.v1.Session() as sess:
+	output = sess.run(result)
+	print(output)
+
+print(output)
